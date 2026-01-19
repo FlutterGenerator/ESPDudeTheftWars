@@ -1,6 +1,8 @@
 # ESPDudeTheftWars
 [![ESPDudeTheftWars Build](https://github.com/FlutterGenerator/ESPDudeTheftWars/actions/workflows/build-apk.yml/badge.svg)](https://github.com/FlutterGenerator/ESPDudeTheftWars/actions/workflows/build-apk.yml)
 
+[![License Info](https://img.shields.io/badge/License-GPL--3.0-blue.svg?style=flat-square)](https://github.com/FlutterGenerator/ESPDudeTheftWars/blob/master/LICENSE)
+
 # Dude Theft Wars Version: (3100011) – 0.9.0.9f6
 **Google Play Release Date:** 10 September 2025
 
