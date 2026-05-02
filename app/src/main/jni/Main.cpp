@@ -17,6 +17,8 @@
 #include "Menu/Jni.hpp"
 #include "Includes/Macros.h"
 #include "Menu/Setup.h"
+#include "KittyMemory/MemoryPatch.h"
+#include "And64InlineHook/And64InlineHook.hpp"
 
 struct MemPatches {
     // let's assume we have patches for these functions for whatever game
