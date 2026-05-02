@@ -13,8 +13,10 @@ Vector2 convertToDeviceScreen(float posX, float posY, float devicewidth, float d
 void (*old_npcupdate)(void *instance);
 void npcupdate(void *instance) {
 	if (instance && EnableESP) {
-		int health = *(int *)((uintptr_t) instance + 0xC);
-		bool isAlive = *(bool *)((uintptr_t) instance + 0x24);
+		// public class ManAI : MonoBehaviour public int health
+		int health = *(int *)((uintptr_t) instance + 0x10);
+		// public class ManAI : MonoBehaviour private bool IsAlive
+		bool isAlive = *(bool *)((uintptr_t) instance + 0x28);
 		if (health > 0 && isAlive) playerslist.insert(instance);
 	}
 	return old_npcupdate(instance);
@@ -58,8 +60,8 @@ void DrawESP(AadilDrawing esp, int width, int height) {
 	Vector2 DrawFrom = Vector2(width/2, 0);
 	for (void *player : playerslist) {
 		if (player) {
-			int health = *(int *)((uintptr_t) player + 0xC);
-			bool isAlive = *(bool *)((uintptr_t) player + 0x24);
+			int health = *(int *)((uintptr_t) player + 0x10);
+			bool isAlive = *(bool *)((uintptr_t) player + 0x28);
 			if (health < 1 || !isAlive) continue;
 			void *transform = get_transform(player);
 			if (transform) {
@@ -90,10 +92,13 @@ void DrawESP(AadilDrawing esp, int width, int height) {
 	Vector2 DrawFrom = Vector2(width/2, 0);
 	for (void *player : playerslist) {
 		if (player) {
-			int health = *(int *)((uintptr_t) player + 0xC);
-			bool isAlive = *(bool *)((uintptr_t) player + 0x24);
+			// public class ManAI : MonoBehaviour public int health
+			int health = *(int *)((uintptr_t) player + 0x10);
+			// public class ManAI : MonoBehaviour private bool IsAlive
+			bool isAlive = *(bool *)((uintptr_t) player + 0x28);
 			if (health < 1 || !isAlive) continue;
-			void *gameobject = *(void **)((uintptr_t) player + 0x20);
+			// public class ManAI : MonoBehaviour public GameObject rig
+			void *gameobject = *(void **)((uintptr_t) player + 0x24);
 			if (gameobject) {
 				void *transform = get_gameobjecttransform(gameobject);
 				if (transform) {
