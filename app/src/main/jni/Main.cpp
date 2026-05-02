@@ -19,6 +19,10 @@
 #include "Menu/Setup.h"
 #include "KittyMemory/MemoryPatch.h"
 #include "And64InlineHook/And64InlineHook.hpp"
+#include "AutoHook/AutoHook.h"
+
+//Target lib here
+#define targetLibName OBFUSCATE("libil2cpp.so")
 
 struct MemPatches {
     // let's assume we have patches for these functions for whatever game
@@ -92,9 +96,6 @@ void (*old_AddCoins)(void *instance, int count);
 void AddCoins(void *instance, int count) {
     return old_AddCoins(instance, count * coinsMul);
 }*/
-
-//Target lib here
-#define targetLibName OBFUSCATE("libil2cpp.so")
 
 ElfScanner g_il2cppELF;
 
