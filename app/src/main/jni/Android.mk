@@ -17,6 +17,7 @@ LOCAL_ARM_MODE := arm
 
 LOCAL_C_INCLUDES += $(LOCAL_PATH)
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/Includes/
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/KittyMemory
 
 # Here you add the cpp file to compile
 LOCAL_SRC_FILES := Main.cpp \
