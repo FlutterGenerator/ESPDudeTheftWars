@@ -141,25 +141,25 @@ void *hack_thread(void *) {
 #elif defined(__arm__)
     //Put your code here if you want the code to be compiled for armv7 only
 	 // public class Component : Object public Transform get_transform() { }
-	get_transform = (void *(*)(void *)) getAbsoluteAddress(targetLibName, str2Offset(OBFUSCATE("0x1C63060")));
+	get_transform = (void *(*)(void *)) getAbsoluteAddress(targetLibName, str2Offset(OBFUSCATE("0x22047E4")));
 	// public class Transform : Component, IEnumerable public Vector3 get_position() { }
-	get_position = (Vector3 (*)(void *)) getAbsoluteAddress(targetLibName, str2Offset(OBFUSCATE("0x1C6BDBC")));
+	get_position = (Vector3 (*)(void *)) getAbsoluteAddress(targetLibName, str2Offset(OBFUSCATE("0x2214930")));
 	// public sealed class Camera : Behaviour public static Camera get_main() { }
-	get_maincamera = (void *(*)()) getAbsoluteAddress(targetLibName, str2Offset(OBFUSCATE("0x1C5DFDC")));
+	get_maincamera = (void *(*)()) getAbsoluteAddress(targetLibName, str2Offset(OBFUSCATE("0x21D6C40")));
 	// public sealed class Camera : Behaviour public Vector3 WorldToScreenPoint(Vector3 position) { }
-	get_worldtoscreenpoint = (Vector3 (*)(void *, Vector3)) getAbsoluteAddress(targetLibName, str2Offset(OBFUSCATE("0x1C5D694")));
+	get_worldtoscreenpoint = (Vector3 (*)(void *, Vector3)) getAbsoluteAddress(targetLibName, str2Offset(OBFUSCATE("0x21D659C")));
 	// public sealed class Screen public static int get_width() { }
-	get_gamewidth = (int (*)()) getAbsoluteAddress(targetLibName, str2Offset(OBFUSCATE("0x1C5833C")));
+	get_gamewidth = (int (*)()) getAbsoluteAddress(targetLibName, str2Offset(OBFUSCATE("0x21E13BC")));
 	// public sealed class Screen public static int get_height() { }
-	get_gameheight = (int (*)()) getAbsoluteAddress(targetLibName, str2Offset(OBFUSCATE("0x1C58384")));
+	get_gameheight = (int (*)()) getAbsoluteAddress(targetLibName, str2Offset(OBFUSCATE("0x21E13FC")));
 	// public sealed class GameObject : Object public Transform get_transform() { }
-	get_gameobjecttransform = (void *(*)(void *)) getAbsoluteAddress(targetLibName, str2Offset(OBFUSCATE("0x1C66324")));
+	get_gameobjecttransform = (void *(*)(void *)) getAbsoluteAddress(targetLibName, str2Offset(OBFUSCATE("0x2207C34")));
 	// public class ManAI : MonoBehaviour private void Update() { }
-	HOOK(targetLibName, str2Offset(OBFUSCATE("0x72CD98")), npcupdate, old_npcupdate);
+	HOOK(targetLibName, str2Offset(OBFUSCATE("0xBC9FE8")), npcupdate, old_npcupdate);
 	// public class ManAI : MonoBehaviour private void OnDisable() { }
-	HOOK(targetLibName, str2Offset(OBFUSCATE("0x72B820")), npcondisable, old_npcondisable);
+	HOOK(targetLibName, str2Offset(OBFUSCATE("0xBC8B44")), npcondisable, old_npcondisable);
 	// public class ManAI : MonoBehaviour private void OnDestroy() { }
-	HOOK(targetLibName, str2Offset(OBFUSCATE("0x72B908")), npcondestroy, old_npcondestroy);
+	HOOK(targetLibName, str2Offset(OBFUSCATE("0xBC8C1C")), npcondestroy, old_npcondestroy);
 	
 #endif
 
