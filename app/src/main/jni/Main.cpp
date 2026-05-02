@@ -17,7 +17,7 @@
 #include "Menu/Jni.hpp"
 #include "Includes/Macros.h"
 #include "Menu/Setup.h"
-#include "KittyMemory/MemoryPatch.h"
+#include "KittyMemory/MemoryPatch.hpp"
 #include "And64InlineHook/And64InlineHook.hpp"
 #include "AutoHook/AutoHook.h"
 
