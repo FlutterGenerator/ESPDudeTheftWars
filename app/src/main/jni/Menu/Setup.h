@@ -19,7 +19,7 @@ void Init(JNIEnv *env, jobject thiz, jobject ctx, jobject title, jobject subtitl
     //Set sub title
     setText(env, subtitle, OBFUSCATE("<b><marquee><p style=\"font-size:30\">"
                                      "<p style=\"color:green;\">Modded by Aadil Mods</p> | "
-                                     "ESP Source (Part 2)</p>"
+                                     "ESP Dude Theft Wars</p>"
                                      "</marquee></b>"));
 
     //Dialog Example
