@@ -3,8 +3,8 @@
 
 [![License Info](https://img.shields.io/badge/License-GPL--3.0-blue.svg?style=flat-square)](https://github.com/FlutterGenerator/ESPDudeTheftWars/blob/master/LICENSE)
 
-# Dude Theft Wars Version: (3100015) – 0.9.1.0a
-**Google Play Release Date:** 28 April 2026
+# Dude Theft Wars Version: (3100016) – 0.9.1.0b
+**Google Play Release Date:** 2 May 2026
 
 ![](img.jpg)
 
